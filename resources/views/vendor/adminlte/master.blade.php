@@ -56,6 +56,21 @@
     })
     @endforeach
     @endif
+
+    @if ($errors->any())
+    Swal.fire ({
+        icon: 'error',
+        tittle: "Ooops",
+        text: "Terjadi suatu kesalahan",
+    })
+    @endif
+
+    $('#table-data').DataTTable();
+
+    let baseurl = "<?=url('/')?>";
+    let fullURL = "<?=url()->full()?>";
+    </script>
+
 </script>
 
 <!DOCTYPE html>
